@@ -3,6 +3,7 @@ import "./globals.css";
 import { ModalProvider } from "./context/ModalContext";
 import { ThemeProvider } from "./context/ThemeContext";
 import { SharedElementModal } from "./components/ui/SharedElementModal";
+import { BuildInfo } from "./components/ui/BuildInfo";
 
 export const metadata: Metadata = {
   title: "Tetsu Osnaya | UX/UI Designer",
@@ -34,6 +35,7 @@ export default function RootLayout({
           <ModalProvider>
             {children}
             <SharedElementModal />
+            <BuildInfo />
           </ModalProvider>
         </ThemeProvider>
       </body>
