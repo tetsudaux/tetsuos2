@@ -32,10 +32,27 @@ export function TetsuHeader() {
       {/* Theme Toggle */}
       <button
         onClick={toggleTheme}
-        className="btn-hover-lift flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--n-100)] bg-[var(--n-50)] text-[var(--v-500)]"
+        role="switch"
+        aria-checked={theme === 'dark'}
         aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+        className="relative flex h-8 w-16 shrink-0 cursor-pointer items-center rounded-full border border-[var(--n-100)] transition-colors duration-300"
+        style={{ backgroundColor: theme === 'dark' ? 'var(--v-800)' : 'var(--n-50)' }}
       >
-        {theme === 'dark' ? <IconSun size={18} /> : <IconMoon size={18} />}
+        {/* Sun icon - left */}
+        <span className="absolute left-1.5 text-[var(--v-500)] transition-opacity duration-200"
+          style={{ opacity: theme === 'dark' ? 0 : 1 }}>
+          <IconSun size={14} />
+        </span>
+        {/* Moon icon - right */}
+        <span className="absolute right-1.5 text-[var(--v-300)] transition-opacity duration-200"
+          style={{ opacity: theme === 'dark' ? 1 : 0 }}>
+          <IconMoon size={14} />
+        </span>
+        {/* Thumb */}
+        <span
+          className="absolute flex h-6 w-6 items-center justify-center rounded-full bg-[var(--v-500)] shadow-sm transition-transform duration-300"
+          style={{ transform: theme === 'dark' ? 'translateX(34px)' : 'translateX(2px)' }}
+        />
       </button>
     </div>
   );

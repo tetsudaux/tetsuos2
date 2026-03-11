@@ -77,11 +77,22 @@ body {
   font-family: 'IBM Plex Sans', system-ui, sans-serif;
 }
 
+/* Floating circles animation */
+@keyframes circleFloat {
+  0%   { transform: translateY(0px)   translateX(0px); }
+  18%  { transform: translateY(-22px) translateX(12px); }
+  38%  { transform: translateY(-12px) translateX(-16px); }
+  58%  { transform: translateY(-30px) translateX(7px); }
+  78%  { transform: translateY(-8px)  translateX(-11px); }
+  100% { transform: translateY(0px)   translateX(0px); }
+}
+
 /* Desktop Background Pattern */
 .desktop-bg {
   background:
     linear-gradient(135deg, var(--v-50) 0%, var(--background) 50%, var(--n-50) 100%);
   position: relative;
+  overflow: hidden;
 }
 
 .desktop-bg::before {

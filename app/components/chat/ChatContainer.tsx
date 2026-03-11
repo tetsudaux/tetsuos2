@@ -7,6 +7,7 @@ import { MessageBubble } from './MessageBubble';
 import { QuickReplies } from './QuickReplies';
 import { TypingIndicator } from './TypingIndicator';
 import { WelcomeMessage } from '@/app/components/sections/WelcomeMessage';
+import { BackgroundCircles } from '@/app/components/ui/BackgroundCircles';
 
 export function ChatContainer() {
   const {
@@ -22,7 +23,8 @@ export function ChatContainer() {
   const isInitial = messages.length === 0;
 
   return (
-    <div className="desktop-bg flex min-h-screen flex-col lg:items-center lg:justify-center lg:p-8">
+    <div className={`desktop-bg flex min-h-screen lg:h-screen flex-col lg:items-center lg:p-8 ${isInitial ? 'lg:justify-center' : 'lg:justify-start'}`}>
+      <BackgroundCircles visible={isInitial} />
       {/* Main Chat Area - Centered like ChatGPT */}
       <div className={`chat-container-animate mx-auto flex h-screen w-full max-w-3xl flex-col lg:h-[calc(100vh-64px)] lg:max-h-[900px] ${isInitial ? 'chat-initial' : 'chat-active'}`}>
         {/* Scrollable Content Area (Header + Messages) */}
