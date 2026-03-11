@@ -101,7 +101,7 @@ export function BackgroundCircles({ visible }: BackgroundCirclesProps) {
   }, []);
 
   return (
-    <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div className="pointer-events-none fixed inset-0" aria-hidden="true">
       {/* Top — all screens */}
       {topCircles.map((c) => (
         <Circle key={c.id} circle={c} visible={visible} mounted={mounted} />

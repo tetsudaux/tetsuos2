@@ -100,36 +100,19 @@ body {
 /* Desktop Background Pattern */
 .desktop-bg {
   background:
-    linear-gradient(135deg, var(--v-50) 0%, var(--background) 50%, var(--n-50) 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.desktop-bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image:
     radial-gradient(circle at 20% 80%, rgba(133, 88, 204, 0.05) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(49, 91, 207, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(153, 51, 123, 0.03) 0%, transparent 40%);
-  pointer-events: none;
+    radial-gradient(circle at 40% 40%, rgba(153, 51, 123, 0.03) 0%, transparent 40%),
+    linear-gradient(135deg, var(--v-50) 0%, var(--background) 50%, var(--n-50) 100%);
 }
 
 /* Dark mode desktop background */
 [data-theme="dark"] .desktop-bg {
   background:
-    linear-gradient(135deg, #0a0a0a 0%, #000000 50%, #080808 100%);
-}
-
-[data-theme="dark"] .desktop-bg::before {
-  background-image:
     radial-gradient(circle at 20% 80%, rgba(133, 88, 204, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(49, 91, 207, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(153, 51, 123, 0.10) 0%, transparent 40%);
+    radial-gradient(circle at 40% 40%, rgba(153, 51, 123, 0.10) 0%, transparent 40%),
+    linear-gradient(135deg, #0a0a0a 0%, #000000 50%, #080808 100%);
 }
 
 /* Chat Container Shadow for Desktop */
