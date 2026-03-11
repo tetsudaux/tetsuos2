@@ -7,6 +7,8 @@ import {
   MailIcon,
 } from '@/app/components/ui/Icons';
 
+const STAGGER_DELAY_MS = 100;
+
 const contactOptions = [
   {
     id: 'whatsapp',
@@ -44,7 +46,7 @@ const contactOptions = [
 
 export function ContactSection() {
   return (
-    <div className="flex flex-col gap-4 lg:gap-6">
+    <section className="flex flex-col gap-4 lg:gap-6">
       <div className="space-y-2 text-base leading-relaxed lg:space-y-3 lg:text-lg lg:leading-relaxed">
         <p>
           <span className="font-bold text-[var(--v-500)]">
@@ -68,7 +70,7 @@ export function ContactSection() {
               target="_blank"
               rel="noopener noreferrer"
               className={`btn-hover-lift link-hover animate-fade-in-up group flex items-center gap-4 rounded-[12px] border-2 border-[var(--v-500)] bg-[var(--background-subtle)] p-4 transition-all lg:p-5 ${option.color} hover:text-white`}
-              style={{ animationDelay: `${index * 100}ms` }}
+              style={{ animationDelay: `${index * STAGGER_DELAY_MS}ms` }}
             >
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[12px] bg-[var(--n-50)] transition-colors group-hover:bg-[var(--background-subtle)]/20 lg:h-14 lg:w-14">
                 <IconComponent size={24} className="text-[var(--v-500)] transition-colors group-hover:text-white" />
@@ -85,6 +87,6 @@ export function ContactSection() {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git push:*)",
+      "Bash(ls -la c:/projects/tetsuos2/*.config.*)"
+    ]
+  }
+}

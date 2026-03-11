@@ -6,6 +6,8 @@ import { PortfolioCard } from '@/app/components/ui/PortfolioCard';
 import { Icon } from '@/app/components/ui/Icons';
 import { TagType } from '@/app/types/chat';
 
+const STAGGER_DELAY_MS = 50;
+
 const filterOptions: { type: TagType; label: string }[] = [
   { type: 'video', label: 'Video' },
   { type: 'diseño', label: 'Diseño' },
@@ -42,7 +44,7 @@ export function PortfolioSection() {
         );
 
   return (
-    <div className="flex flex-col gap-4 lg:gap-6">
+    <section className="flex flex-col gap-4 lg:gap-6">
       <div className="space-y-2 text-base leading-relaxed lg:space-y-3 lg:text-lg lg:leading-relaxed">
         <p>
           <span className="font-bold text-[var(--v-500)]">
@@ -98,7 +100,7 @@ export function PortfolioSection() {
             <div
               key={project.id}
               className="animate-fade-in-up"
-              style={{ animationDelay: `${index * 50}ms` }}
+              style={{ animationDelay: `${index * STAGGER_DELAY_MS}ms` }}
             >
               <PortfolioCard project={project} />
             </div>
@@ -126,6 +128,6 @@ export function PortfolioSection() {
           Mostrando {filteredProjects.length} de {portfolioProjects.length} proyectos
         </p>
       )}
-    </div>
+    </section>
   );
 }

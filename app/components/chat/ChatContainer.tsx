@@ -35,14 +35,14 @@ export function ChatContainer() {
           {/* Content wrapper - animated position */}
           <div className={`content-wrapper-animate ${isInitial ? 'content-centered' : 'content-top'}`}>
             {/* Header - Now scrolls with content */}
-            <header className="header-animate px-4 lg:px-8" style={{ borderBottomColor: isInitial ? 'transparent' : 'var(--n-100)', borderBottomWidth: '1px', borderBottomStyle: 'solid' }}>
+            <header className={`header-animate border-b px-4 lg:px-8 ${isInitial ? 'border-transparent' : 'border-[var(--n-100)]'}`}>
               <TetsuHeader />
             </header>
 
             {/* Messages */}
             <div className="messages-container-animate flex flex-col gap-4 px-4 pb-28 pt-6 lg:gap-6 lg:px-8 lg:pb-8 lg:pt-8">
               {/* Welcome Message - Always shown first */}
-              <div className={`welcome-animate ${isInitial ? 'welcome-initial' : 'welcome-active'}`}>
+              <div>
                 <WelcomeMessage />
               </div>
 

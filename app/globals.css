@@ -40,6 +40,10 @@
   --radius-lg: 16px;
   --radius-xl: 24px;
   --radius-full: 9999px;
+
+  /* Animation Timing */
+  --timing-smooth: var(--timing-smooth);
+  --timing-fluid: var(--timing-fluid);
 }
 
 /* Dark Mode Variables */
@@ -55,6 +59,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-v-50: var(--v-50);
+  --color-v-300: var(--v-300);
+  --color-v-500: var(--v-500);
+  --color-v-800: var(--v-800);
+  --color-ir-700: var(--ir-700);
+  --color-ink: var(--ink);
   --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
   --font-heading: 'Space Grotesk', system-ui, sans-serif;
 }
@@ -134,9 +144,9 @@ body {
 /* Chat Container Animation - Apple-like smooth transitions */
 .chat-container-animate {
   transition: 
-    background-color 1s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 1.2s cubic-bezier(0.4, 0, 0.2, 1),
-    border-radius 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 1s var(--timing-smooth),
+    box-shadow 1.2s var(--timing-smooth),
+    border-radius 0.8s var(--timing-smooth);
   will-change: background-color, box-shadow, border-radius;
 }
 
@@ -163,7 +173,7 @@ body {
 
 /* Header border animation */
 .header-animate {
-  transition: border-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 1s var(--timing-smooth);
 }
 
 /* Content wrapper position animation - uses margin for smooth animation */
@@ -171,8 +181,8 @@ body {
   display: flex;
   flex-direction: column;
   transition: 
-    margin 1s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+    margin 1s var(--timing-smooth),
+    transform 1s var(--timing-smooth);
   will-change: margin, transform;
 }
 
@@ -186,34 +196,16 @@ body {
   margin-bottom: 0;
 }
 
-/* Welcome message animation */
-.welcome-animate {
-  transition: 
-    transform 0.9s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform, opacity;
-}
-
-.welcome-initial {
-  transform: scale(1);
-  opacity: 1;
-}
-
-.welcome-active {
-  transform: scale(1);
-  opacity: 1;
-}
-
 /* Quick replies animation */
 .quick-replies-animate {
   transition: 
-    opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity 0.5s var(--timing-smooth),
+    transform 0.5s var(--timing-smooth);
 }
 
 /* Message entrance animation */
 .message-animate {
-  animation: messageSlideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: messageSlideIn 0.8s var(--timing-smooth) forwards;
   opacity: 0;
 }
 
@@ -230,7 +222,7 @@ body {
 
 /* Messages container animation */
 .messages-container-animate {
-  transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.9s var(--timing-smooth);
 }
 
 /* Footer slide-up animation */
@@ -246,7 +238,7 @@ body {
 }
 
 .footer-animate {
-  animation: slideUpFade 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: slideUpFade 0.8s var(--timing-smooth) forwards;
   animation-delay: 0.3s;
   opacity: 0;
 }
@@ -305,7 +297,7 @@ body {
 }
 
 .animate-fade-out {
-  animation: fadeOut 400ms cubic-bezier(0.32, 0.72, 0, 1) forwards;
+  animation: fadeOut 400ms var(--timing-fluid) forwards;
 }
 
 @keyframes bounce {
@@ -400,7 +392,6 @@ body {
 
 @media (min-width: 1024px) {
   .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
@@ -464,7 +455,7 @@ a:focus-visible {
 
 /* Apple-style timing function */
 .apple-ease {
-  transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+  transition-timing-function: var(--timing-fluid);
 }
 
 /* Content fade-in animation for modal sections */
@@ -481,7 +472,43 @@ a:focus-visible {
 
 .animate-content-fade-in {
   opacity: 0;
-  animation: contentFadeIn 0.5s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+  animation: contentFadeIn 0.5s var(--timing-fluid) forwards;
+}
+
+/* Theme toggle track background (avoids inline style) */
+.theme-toggle-track {
+  background-color: var(--n-50);
+}
+
+[data-theme="dark"] .theme-toggle-track {
+  background-color: var(--v-800);
+}
+
+/* Japanese font utility */
+.font-jp {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Reduced motion — respect user accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  .chat-container-animate,
+  .content-wrapper-animate,
+  .messages-container-animate,
+  .message-animate,
+  .footer-animate,
+  .quick-replies-animate,
+  .animate-slide-in-left,
+  .animate-slide-in-right,
+  .animate-fade-in,
+  .animate-fade-in-up,
+  .animate-fade-out,
+  .animate-content-fade-in,
+  .typing-dot {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* Message bubble border-radius variants */
