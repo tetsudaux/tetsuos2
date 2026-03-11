@@ -26,7 +26,7 @@ export function ChatContainer() {
     <div className="desktop-bg flex min-h-screen lg:h-screen flex-col lg:items-center lg:justify-center lg:p-8">
       <BackgroundCircles visible={isInitial} />
       {/* Main Chat Area - Centered like ChatGPT */}
-      <div className={`chat-container-animate mx-auto flex h-screen w-full max-w-3xl flex-col lg:h-[calc(100vh-64px)] ${isInitial ? 'chat-initial' : 'chat-active'}`}>
+      <div className={`chat-container-animate mx-auto flex h-screen w-full flex-col lg:h-[calc(100vh-64px)] lg:w-[80vw] lg:max-w-[1200px] ${isInitial ? 'chat-initial' : 'chat-active'}`}>
         {/* Scrollable Content Area (Header + Messages) */}
         <main
           ref={scrollContainerRef}
