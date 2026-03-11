@@ -221,7 +221,7 @@ export function SharedElementModal() {
         {/* Back Button - Mobile: above footer, Desktop: bottom right of modal */}
         <button
           onClick={handleClose}
-          className={`btn-hover-lift fixed bottom-24 right-4 z-[110] flex items-center gap-3 border-2 border-[var(--ir-700)] bg-white px-4 py-3 font-semibold text-[var(--ir-700)] shadow-[0_4px_12px_rgba(49,91,207,0.15),0_8px_24px_rgba(49,91,207,0.1)] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[var(--ir-700)] hover:text-white lg:absolute lg:bottom-6 lg:right-6 lg:z-20 lg:px-5 lg:py-3.5 ${
+          className={`btn-hover-lift fixed bottom-24 right-4 z-[110] flex items-center gap-3 border-2 border-[var(--ir-700)] bg-[var(--background-subtle)] px-4 py-3 font-semibold text-[var(--ir-700)] shadow-[0_4px_12px_rgba(49,91,207,0.15),0_8px_24px_rgba(49,91,207,0.1)] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[var(--ir-700)] hover:text-white lg:absolute lg:bottom-6 lg:right-6 lg:z-20 lg:px-5 lg:py-3.5 ${
             animationPhase === 'closing' ? 'opacity-0 translate-y-4 scale-95' : 'opacity-100 translate-y-0 scale-100'
           }`}
           style={{
@@ -279,7 +279,7 @@ export function SharedElementModal() {
 
           {/* Content - Fades in after expansion */}
           <div
-            className={`bg-white transition-opacity duration-300 ${
+            className={`bg-[var(--background-subtle)] transition-opacity duration-300 ${
               isContentVisible && animationPhase !== 'closing' ? 'opacity-100' : 'opacity-0'
             }`}
           >

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ModalProvider } from "./context/ModalContext";
+import { ThemeProvider } from "./context/ThemeContext";
 import { SharedElementModal } from "./components/ui/SharedElementModal";
 
 export const metadata: Metadata = {
@@ -14,8 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);}else if(window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}else{document.documentElement.setAttribute('data-theme','light');}})();`,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -24,10 +30,12 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <ModalProvider>
-          {children}
-          <SharedElementModal />
-        </ModalProvider>
+        <ThemeProvider>
+          <ModalProvider>
+            {children}
+            <SharedElementModal />
+          </ModalProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

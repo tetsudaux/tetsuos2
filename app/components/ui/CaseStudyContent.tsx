@@ -296,7 +296,7 @@ function LinkBlock({ block, accentColor, borderColor, index }: {
         href={block.href}
         target="_blank"
         rel="noopener noreferrer"
-        className={`inline-flex items-center gap-3 rounded-[12px] border-2 ${borderColor} bg-white px-5 py-3 font-semibold ${accentColor} transition-all hover:bg-[var(--v-500)] hover:text-white hover:border-[var(--v-500)] lg:px-6 lg:py-4`}
+        className={`inline-flex items-center gap-3 rounded-[12px] border-2 ${borderColor} bg-[var(--background-subtle)] px-5 py-3 font-semibold ${accentColor} transition-all hover:bg-[var(--v-500)] hover:text-white hover:border-[var(--v-500)] lg:px-6 lg:py-4`}
       >
         <IconExternalLink size={20} />
         <span>{block.label}</span>

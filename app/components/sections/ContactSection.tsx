@@ -67,10 +67,10 @@ export function ContactSection() {
               href={option.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`btn-hover-lift link-hover animate-fade-in-up group flex items-center gap-4 rounded-[12px] border-2 border-[var(--v-500)] bg-white p-4 transition-all lg:p-5 ${option.color} hover:text-white`}
+              className={`btn-hover-lift link-hover animate-fade-in-up group flex items-center gap-4 rounded-[12px] border-2 border-[var(--v-500)] bg-[var(--background-subtle)] p-4 transition-all lg:p-5 ${option.color} hover:text-white`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[12px] bg-[var(--v-50)] transition-colors group-hover:bg-white/20 lg:h-14 lg:w-14">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[12px] bg-[var(--n-50)] transition-colors group-hover:bg-[var(--background-subtle)]/20 lg:h-14 lg:w-14">
                 <IconComponent size={24} className="text-[var(--v-500)] transition-colors group-hover:text-white" />
               </div>
               <div className="flex flex-col">

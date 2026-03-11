@@ -80,7 +80,7 @@ export function ChatContainer() {
           <>
             {/* Desktop: Static footer when no modal */}
             <footer
-              className={`hidden lg:block shrink-0 rounded-b-2xl border-t border-[var(--n-100)] bg-white px-8 py-6 transition-opacity duration-300 ${
+              className={`hidden lg:block shrink-0 rounded-b-2xl border-t border-[var(--n-100)] bg-[var(--background-subtle)] px-8 py-6 transition-opacity duration-300 ${
                 isModalOpen ? 'lg:opacity-0 lg:pointer-events-none' : 'lg:opacity-100'
               }`}
             >
@@ -93,7 +93,7 @@ export function ChatContainer() {
 
             {/* Mobile: Fixed footer always | Desktop: Fixed footer only when modal open */}
             <footer
-              className={`fixed bottom-0 left-0 right-0 z-[100] rounded-t-[20px] bg-white px-4 py-4 shadow-[0_0_2px_rgba(49,91,207,0.15),0_-8px_16px_rgba(49,91,207,0.25)] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] lg:hidden ${
+              className={`fixed bottom-0 left-0 right-0 z-[100] rounded-t-[20px] bg-[var(--background-subtle)] px-4 py-4 shadow-[0_0_2px_rgba(49,91,207,0.15),0_-8px_16px_rgba(49,91,207,0.25)] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] lg:hidden ${
                 isModalOpen
                   ? 'lg:!block lg:bottom-4 lg:left-1/2 lg:right-auto lg:z-[70] lg:w-[min(90vw,1024px)] lg:-translate-x-1/2 lg:rounded-[20px] lg:px-8 lg:py-6 lg:opacity-100 lg:shadow-[0_0_2px_rgba(49,91,207,0.15),0_14px_28px_rgba(49,91,207,0.35)]'
                   : ''
