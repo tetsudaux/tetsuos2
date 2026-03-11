@@ -28,9 +28,9 @@ export function ChatContainer() {
       {/* Main Chat Area - Centered like ChatGPT */}
       <div className={`chat-container-animate mx-auto flex h-screen w-full max-w-3xl flex-col lg:h-[calc(100vh-64px)] ${isInitial ? 'chat-initial' : 'chat-active'}`}>
         {/* Scrollable Content Area (Header + Messages) */}
-        <main 
+        <main
           ref={scrollContainerRef}
-          className={`chat-scroll flex-1 overflow-y-auto flex flex-col ${isInitial ? 'justify-center' : 'justify-start'}`}
+          className={`chat-scroll flex-1 min-h-0 overflow-y-auto flex flex-col ${isInitial ? 'justify-center' : 'justify-start'}`}
         >
           {/* Content wrapper - animated position */}
           <div className={`content-wrapper-animate ${isInitial ? 'content-centered' : 'content-top'}`}>
@@ -42,9 +42,7 @@ export function ChatContainer() {
             {/* Messages */}
             <div className="messages-container-animate flex flex-col gap-4 px-4 pb-28 pt-6 lg:gap-6 lg:px-8 lg:pb-8 lg:pt-8">
               {/* Welcome Message - Always shown first */}
-              <div>
-                <WelcomeMessage />
-              </div>
+              <WelcomeMessage />
 
               {/* Quick Replies - Inside chat area only at start */}
               {isInitial && (
