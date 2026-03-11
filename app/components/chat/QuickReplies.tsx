@@ -8,9 +8,10 @@ interface QuickRepliesProps {
   replies: QuickReply[];
   onSelect: (reply: QuickReply) => void;
   disabled?: boolean;
+  inline?: boolean;
 }
 
-export function QuickReplies({ replies, onSelect, disabled }: QuickRepliesProps) {
+export function QuickReplies({ replies, onSelect, disabled, inline }: QuickRepliesProps) {
   const { isOpen, closeModal } = useModal();
 
   const handleClick = (reply: QuickReply) => {
@@ -21,7 +22,7 @@ export function QuickReplies({ replies, onSelect, disabled }: QuickRepliesProps)
   };
 
   return (
-    <div className="flex flex-row flex-nowrap justify-end gap-3 lg:gap-4">
+    <div className={`flex flex-row justify-end gap-3 lg:gap-4 ${inline ? 'flex-nowrap' : 'flex-wrap'}`}>
       {replies.map((reply, index) => (
         <button
           key={reply.id}

@@ -88,6 +88,7 @@ export function ChatContainer() {
                 replies={availableReplies}
                 onSelect={handleQuickReply}
                 disabled={isTyping}
+                inline
               />
             </footer>
 
@@ -103,6 +104,7 @@ export function ChatContainer() {
                 replies={availableReplies}
                 onSelect={handleQuickReply}
                 disabled={isTyping}
+                inline
               />
             </footer>
           </>
