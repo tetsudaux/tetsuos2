@@ -22,16 +22,18 @@ export function QuickReplies({ replies, onSelect, disabled, inline }: QuickRepli
   };
 
   return (
-    <div className={`flex flex-row justify-end gap-3 lg:gap-4 ${inline ? 'flex-nowrap' : 'flex-wrap'}`}>
+    <div className={`flex flex-row justify-end gap-2 lg:gap-4 ${inline ? 'flex-nowrap' : 'flex-wrap'}`}>
       {replies.map((reply, index) => (
         <button
           key={reply.id}
           onClick={() => handleClick(reply)}
           disabled={disabled}
-          className="msg-radius btn-hover-lift animate-fade-in-up flex items-center gap-3 border-2 border-[var(--ir-700)] bg-[var(--background-subtle)] px-4 py-3 font-semibold text-[var(--ir-700)] transition-all hover:bg-[var(--ir-700)] hover:text-white disabled:cursor-not-allowed disabled:opacity-50 lg:px-5 lg:py-3.5"
+          className="msg-radius btn-hover-lift animate-fade-in-up flex items-center gap-2 whitespace-nowrap border-2 border-[var(--ir-700)] bg-[var(--background-subtle)] px-3 py-2 text-sm font-semibold text-[var(--ir-700)] transition-all hover:bg-[var(--ir-700)] hover:text-white disabled:cursor-not-allowed disabled:opacity-50 lg:gap-3 lg:px-5 lg:py-3.5 lg:text-base"
           style={{ animationDelay: `${index * 100}ms` }}
         >
-          <Icon name={reply.icon as IconName} size={20} />
+          <span className="hidden sm:inline-flex">
+            <Icon name={reply.icon as IconName} size={20} />
+          </span>
           <span>{reply.label}</span>
         </button>
       ))}
