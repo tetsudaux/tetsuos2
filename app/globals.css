@@ -11,6 +11,10 @@
   /* Interactive Colors */
   --ir-700: #315bcf;
 
+  /* Action Colors */
+  --rd-700: #cc3344;
+  --gn-700: #1e8a5c;
+
   /* Magenta Colors */
   --mg-300: #d98cc2;
   --mg-700: #99337b;
@@ -64,6 +68,8 @@
   --color-v-500: var(--v-500);
   --color-v-800: var(--v-800);
   --color-ir-700: var(--ir-700);
+  --color-rd-700: var(--rd-700);
+  --color-gn-700: var(--gn-700);
   --color-ink: var(--ink);
   --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
   --font-heading: 'Space Grotesk', system-ui, sans-serif;
@@ -377,6 +383,18 @@ body {
   .portfolio-grid {
     gap: 20px;
   }
+}
+
+/* Action Button — color driven by --btn-color */
+.btn-action {
+  --btn-color: var(--ir-700);
+  border-color: var(--btn-color);
+  color: var(--btn-color);
+}
+
+.btn-action:hover:not(:disabled) {
+  background-color: var(--btn-color);
+  color: white;
 }
 
 /* Button Hover Effects */

@@ -155,27 +155,27 @@ export const portfolioProjects: PortfolioProject[] = [
 ];
 
 export const initialReplies: QuickReply[] = [
-  { id: 'ver-cv', label: 'Ver tu CV', icon: 'clipboard', section: 'cv' },
-  { id: 'ver-trabajo', label: 'Ver tu trabajo', icon: 'layout', section: 'portfolio' },
-  { id: 'hablemos', label: 'Hablemos', icon: 'messages', section: 'contact' },
+  { id: 'ver-cv', label: 'Ver tu CV', icon: 'clipboard', section: 'cv', color: 'blue' },
+  { id: 'ver-trabajo', label: 'Ver tu trabajo', icon: 'layout', section: 'portfolio', color: 'red' },
+  { id: 'hablemos', label: 'Hablemos', icon: 'messages', section: 'contact', color: 'green' },
 ];
 
 export const cvReplies: QuickReply[] = [
-  { id: 'ver-trabajo', label: 'Ver tu trabajo', icon: 'layout', section: 'portfolio' },
-  { id: 'hablemos', label: 'Hablemos', icon: 'messages', section: 'contact' },
-  { id: 'ir-inicio', label: 'Ir a Inicio', icon: 'home', section: 'welcome' },
+  { id: 'ver-trabajo', label: 'Ver tu trabajo', icon: 'layout', section: 'portfolio', color: 'red' },
+  { id: 'hablemos', label: 'Hablemos', icon: 'messages', section: 'contact', color: 'green' },
+  { id: 'ir-inicio', label: 'Ir a Inicio', icon: 'home', section: 'welcome', color: 'blue' },
 ];
 
 export const portfolioReplies: QuickReply[] = [
-  { id: 'ver-cv', label: 'Ver tu CV', icon: 'clipboard', section: 'cv' },
-  { id: 'hablemos', label: 'Hablemos', icon: 'messages', section: 'contact' },
-  { id: 'ir-inicio', label: 'Ir a Inicio', icon: 'home', section: 'welcome' },
+  { id: 'ver-cv', label: 'Ver tu CV', icon: 'clipboard', section: 'cv', color: 'blue' },
+  { id: 'hablemos', label: 'Hablemos', icon: 'messages', section: 'contact', color: 'green' },
+  { id: 'ir-inicio', label: 'Ir a Inicio', icon: 'home', section: 'welcome', color: 'blue' },
 ];
 
 export const contactReplies: QuickReply[] = [
-  { id: 'ver-cv', label: 'Ver tu CV', icon: 'clipboard', section: 'cv' },
-  { id: 'ver-trabajo', label: 'Ver tu trabajo', icon: 'layout', section: 'portfolio' },
-  { id: 'ir-inicio', label: 'Ir a Inicio', icon: 'home', section: 'welcome' },
+  { id: 'ver-cv', label: 'Ver tu CV', icon: 'clipboard', section: 'cv', color: 'blue' },
+  { id: 'ver-trabajo', label: 'Ver tu trabajo', icon: 'layout', section: 'portfolio', color: 'red' },
+  { id: 'ir-inicio', label: 'Ir a Inicio', icon: 'home', section: 'welcome', color: 'blue' },
 ];
 
 export const getRepliesForSection = (section: string): QuickReply[] => {

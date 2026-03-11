@@ -1,8 +1,14 @@
 'use client';
 
-import { QuickReply } from '@/app/types/chat';
+import { QuickReply, ActionColor } from '@/app/types/chat';
 import { Icon, IconName } from '@/app/components/ui/Icons';
 import { useModal } from '@/app/context/ModalContext';
+
+const colorVar: Record<ActionColor, string> = {
+  blue: 'var(--ir-700)',
+  red: 'var(--rd-700)',
+  green: 'var(--gn-700)',
+};
 
 interface QuickRepliesProps {
   replies: QuickReply[];
@@ -28,8 +34,11 @@ export function QuickReplies({ replies, onSelect, disabled, inline }: QuickRepli
           key={reply.id}
           onClick={() => handleClick(reply)}
           disabled={disabled}
-          className="msg-radius btn-hover-lift animate-fade-in-up flex items-center gap-2 whitespace-nowrap border-2 border-[var(--ir-700)] bg-[var(--background-subtle)] px-3 py-2 text-sm font-semibold text-[var(--ir-700)] transition-all hover:bg-[var(--ir-700)] hover:text-white disabled:cursor-not-allowed disabled:opacity-50 lg:gap-3 lg:px-5 lg:py-3.5 lg:text-base"
-          style={{ animationDelay: `${index * 100}ms` }}
+          className="btn-action msg-radius btn-hover-lift animate-fade-in-up flex items-center gap-2 whitespace-nowrap border-2 bg-[var(--background-subtle)] px-3 py-2 text-sm font-semibold transition-all disabled:cursor-not-allowed disabled:opacity-50 lg:gap-3 lg:px-5 lg:py-3.5 lg:text-base"
+          style={{
+            '--btn-color': colorVar[reply.color ?? 'blue'],
+            animationDelay: `${index * 100}ms`,
+          } as React.CSSProperties}
         >
           <span className="hidden sm:inline-flex">
             <Icon name={reply.icon as IconName} size={20} />

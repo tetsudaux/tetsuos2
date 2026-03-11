@@ -10,11 +10,14 @@ export interface Message {
   timestamp: number;
 }
 
+export type ActionColor = 'blue' | 'red' | 'green';
+
 export interface QuickReply {
   id: string;
   label: string;
   icon: 'clipboard' | 'layout' | 'messages' | 'home' | 'download';
   section: Section;
+  color?: ActionColor;
 }
 
 export type TagType =
