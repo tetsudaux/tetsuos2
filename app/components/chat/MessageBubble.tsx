@@ -41,7 +41,7 @@ export function MessageBubble({ message }: MessageBubbleProps) {
   
   return (
     <div className={`flex justify-start ${animationClass}`}>
-      <div className="msg-radius-alt message-bubble max-w-[95%] border-2 border-[var(--v-500)] bg-[var(--background-subtle)] p-4 sm:max-w-[85%] lg:max-w-[80%] lg:p-6">
+      <div className="msg-radius-alt message-bubble w-full border-2 border-[var(--v-500)] bg-[var(--background-subtle)] p-4 lg:p-6">
         {renderContent()}
       </div>
     </div>
