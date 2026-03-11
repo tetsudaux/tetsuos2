@@ -44,12 +44,12 @@
 
 /* Dark Mode Variables */
 [data-theme="dark"] {
-  --background: #0d0b16;
-  --background-subtle: #17142a;
+  --background: #000000;
+  --background-subtle: #0d0d0d;
   --foreground: #f0edf8;
   --ink: #f0edf8;
-  --n-50: #201c32;
-  --n-100: #2e2845;
+  --n-50: #111111;
+  --n-100: #1e1e1e;
 }
 
 @theme inline {
@@ -112,7 +112,7 @@ body {
 /* Dark mode desktop background */
 [data-theme="dark"] .desktop-bg {
   background:
-    linear-gradient(135deg, #1a1530 0%, #0d0b16 50%, #130f20 100%);
+    linear-gradient(135deg, #0a0a0a 0%, #000000 50%, #080808 100%);
 }
 
 [data-theme="dark"] .desktop-bg::before {
