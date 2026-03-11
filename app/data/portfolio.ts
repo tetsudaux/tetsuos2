@@ -1,5 +1,4 @@
 import { PortfolioProject, QuickReply } from '@/app/types/chat';
-import { CaseStudyContent } from '../components/ui/CaseStudyContent';
 
 export const portfolioProjects: PortfolioProject[] = [
   {
@@ -22,23 +21,6 @@ export const portfolioProjects: PortfolioProject[] = [
           { icon: 'vector', label: 'Illustrator' },
         ]},
         { type: 'video', youtubeId: 'hMh8jDh_qQA', title: 'Video destacado' },
-        /*
-        { type: 'text', title: '', value: 'Audiovisual Production: script creation, photography, video editing, publication of content on social networks. ' },
-        { type: 'text-featured', title: 'The Goal', value: 'The goal was to learn how to create content for a YouTube channel and how to use social media to promote it.' },
-        
-        { type: 'text', title: 'La Solución', value: 'Implementé un nuevo formato de videos con storytelling, mejor edición y un calendario de publicación consistente.' },
-        { type: 'gallery', images: [
-          { src: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=600&h=600&fit=crop', alt: 'Thumbnail 1' },
-          { src: 'https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=600&h=600&fit=crop', alt: 'Thumbnail 2' },
-          { src: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&h=600&fit=crop', alt: 'Thumbnail 3' },
-          { src: 'https://images.unsplash.com/photo-1611162618479-ee3d24aaef0b?w=600&h=600&fit=crop', alt: 'Thumbnail 4' },
-        ]},
-        { type: 'metrics', items: [
-          { icon: 'users', value: '+300%', label: 'Suscriptores' },
-          { icon: 'eye', value: '+150%', label: 'Tiempo de visualización' },
-          { icon: 'heart', value: '+200%', label: 'Engagement' },
-        ]},
-        */
       ],
     },
   },

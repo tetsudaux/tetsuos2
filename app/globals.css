@@ -484,17 +484,13 @@ a:focus-visible {
   animation: contentFadeIn 0.5s cubic-bezier(0.32, 0.72, 0, 1) forwards;
 }
 
-/* Duration utilities for transitions */
-.duration-400 {
-  transition-duration: 400ms;
+/* Message bubble border-radius variants */
+.msg-radius {
+  border-radius: 12px 12px 4px 12px;
 }
 
-.duration-500 {
-  transition-duration: 500ms;
-}
-
-.duration-600 {
-  transition-duration: 600ms;
+.msg-radius-alt {
+  border-radius: 4px 12px 12px 12px;
 }
 
 /* Modal scrollbar - Hidden */

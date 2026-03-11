@@ -18,10 +18,7 @@ export function MessageBubble({ message }: MessageBubbleProps) {
   if (isUser) {
     return (
       <div className={`flex justify-end ${animationClass}`}>
-        <div 
-          className="message-bubble max-w-[85%] bg-[var(--ir-700)] px-4 py-3 lg:max-w-[70%] lg:px-5 lg:py-4"
-          style={{ borderRadius: '12px 12px 4px 12px' }}
-        >
+        <div className="msg-radius message-bubble max-w-[85%] bg-[var(--ir-700)] px-4 py-3 lg:max-w-[70%] lg:px-5 lg:py-4">
           <p className="font-semibold text-white lg:text-lg">{message.content}</p>
         </div>
       </div>
@@ -44,10 +41,7 @@ export function MessageBubble({ message }: MessageBubbleProps) {
   
   return (
     <div className={`flex justify-start ${animationClass}`}>
-      <div 
-        className="message-bubble max-w-[95%] border-2 border-[var(--v-500)] bg-[var(--background-subtle)] p-4 sm:max-w-[85%] lg:max-w-[80%] lg:p-6"
-        style={{ borderRadius: '4px 12px 12px 12px' }}
-      >
+      <div className="msg-radius-alt message-bubble max-w-[95%] border-2 border-[var(--v-500)] bg-[var(--background-subtle)] p-4 sm:max-w-[85%] lg:max-w-[80%] lg:p-6">
         {renderContent()}
       </div>
     </div>

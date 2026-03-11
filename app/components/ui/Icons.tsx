@@ -49,20 +49,9 @@ export function Icon({ name, size = 24, className }: IconProps) {
   return IconComponent ? <IconComponent size={size} className={className} /> : null;
 }
 
-// Re-export individual icons for direct use
+// Re-export icons used directly in components
 export {
-  IconClipboardFilled as ClipboardIcon,
-  IconLayoutFilled as LayoutIcon,
-  IconMessageFilled as MessagesIcon,
-  IconHomeFilled as HomeIcon,
   IconDownload as DownloadIcon,
-  IconPlayerPlayFilled as VideoIcon,
-  IconPaletteFilled as DesignIcon,
-  IconCodeCircleFilled as CodeIcon,
-  IconUsers as SocialIcon,
-  IconSparkles as SparklesIcon,
-  IconClockFilled as ProductIcon,
-  IconChartBar as MarketingIcon,
   IconBrandWhatsappFilled as WhatsAppIcon,
   IconPhoneFilled as ZoomIcon,
   IconBrandLinkedinFilled as LinkedInIcon,
