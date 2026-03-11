@@ -13,7 +13,8 @@
       "Bash(explorer.exe \"C:\\\\projects\\\\tetsuos2\\\\public\\\\assets\\\\case-studies\")",
       "Bash(start \"\" \"C:\\\\projects\\\\tetsuos2\\\\public\\\\assets\\\\case-studies\")",
       "Bash(dir /s /b \"C:\\\\projects\\\\tetsuos2\\\\public\\\\*.webp\")",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(tree:*)"
     ]
   }
 }
