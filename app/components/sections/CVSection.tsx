@@ -27,7 +27,7 @@ export function CVSection() {
       </div>
 
       <a
-        href="https://drive.google.com/file/d/19Hnd5i7MkiwQXp6t2yzFUJsZ3Jvkn4ju/view"
+        href="https://drive.google.com/file/d/1J_ieGo91k-IhHhsiFZh3lmP83auN0oIg/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
         className="msg-radius-alt btn-hover-lift link-hover inline-flex w-fit items-center gap-3 border-2 border-[var(--v-500)] bg-[var(--background-subtle)] px-4 py-3 font-bold text-[var(--v-500)] transition-all hover:bg-[var(--v-500)] hover:text-white lg:px-5 lg:py-4 lg:text-lg"
