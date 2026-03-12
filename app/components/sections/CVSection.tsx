@@ -8,21 +8,20 @@ export function CVSection() {
       <div className="space-y-3 text-base leading-relaxed lg:space-y-4 lg:text-lg lg:leading-relaxed">
         <p>
           <span className="font-bold text-[var(--v-500)]">
-            ¡Gracias por interesarte en mi CV!
+            Thanks for your interest in my CV!
           </span>
         </p>
         <p className="text-[var(--ink)]">
-          He colaborado con equipos de edtech, e-commerce y contenidos. También
-          produzco experiencias en Moodle, H5P y Rise y apoyo con HTML/CSS.
+          I&apos;ve collaborated with edtech, e-commerce, and content teams. I also
+          build experiences with Moodle, H5P, and Rise, plus HTML/CSS support.
         </p>
         <p className="text-[var(--ink)]">
-          Si me cuentas tu objetivo, te digo cómo puedo ayudarte y te comparto
-          proyectos relevantes.
+          Tell me your goal, and I&apos;ll show you how I can help with relevant
+          projects.
         </p>
         <p className="text-[var(--ink)]">
-          Si quieres ver el detalle en una sola página, toca &quot;Descargar CV&quot;
-          aquí abajo. Ahí encontrarás mi experiencia, proyectos y herramientas
-          de forma directa.
+          Want the full picture on one page? Tap &quot;Download CV&quot; below for my
+          experience, projects, and tools at a glance.
         </p>
       </div>
 
@@ -33,7 +32,7 @@ export function CVSection() {
         className="msg-radius-alt btn-hover-lift link-hover inline-flex w-fit items-center gap-3 border-2 border-[var(--v-500)] bg-[var(--background-subtle)] px-4 py-3 font-bold text-[var(--v-500)] transition-all hover:bg-[var(--v-500)] hover:text-white lg:px-5 lg:py-4 lg:text-lg"
       >
         <DownloadIcon size={22} />
-        <span>Descargar CV</span>
+        <span>Download CV</span>
       </a>
     </div>
   );

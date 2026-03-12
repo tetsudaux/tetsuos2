@@ -22,12 +22,12 @@ export interface QuickReply {
 
 export type TagType =
   | 'video'
-  | 'diseño'
+  | 'design'
   | 'social-media'
-  | 'código'
+  | 'code'
   | 'marketing'
   | 'ai'
-  | 'producto';
+  | 'product';
 
 export interface Tag {
   type: TagType;

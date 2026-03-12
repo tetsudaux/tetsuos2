@@ -232,10 +232,10 @@ export function SharedElementModal() {
             animationFillMode: 'forwards',
             animationDelay: '400ms',
           }}
-          aria-label="Regresar"
+          aria-label="Go back"
         >
           <IconArrowLeft size={20} />
-          <span>Regresar</span>
+          <span>Go back</span>
         </button>
 
         {/* Scrollable Content - Hero + Case Study */}

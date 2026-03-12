@@ -10,12 +10,12 @@ const STAGGER_DELAY_MS = 50;
 
 const filterOptions: { type: TagType; label: string }[] = [
   { type: 'video', label: 'Video' },
-  { type: 'diseño', label: 'Diseño' },
+  { type: 'design', label: 'Design' },
   { type: 'social-media', label: 'Social Media' },
-  { type: 'código', label: 'Código' },
+  { type: 'code', label: 'Code' },
   { type: 'marketing', label: 'Marketing' },
   { type: 'ai', label: 'AI' },
-  { type: 'producto', label: 'Producto' },
+  { type: 'product', label: 'Product' },
 ];
 
 export function PortfolioSection() {
@@ -48,22 +48,21 @@ export function PortfolioSection() {
       <div className="space-y-2 text-base leading-relaxed lg:space-y-3 lg:text-lg lg:leading-relaxed">
         <p>
           <span className="font-bold text-[var(--v-500)]">
-            ¡Perfecto, te comparto mi trabajo!
+            Here&apos;s my work!
           </span>
         </p>
         <p className="text-[var(--ink)]">
-          Aquí encontrarás experiencia real con proceso, prototipos y
-          resultados.
+          Real experience with process, prototypes, and results.
         </p>
         <p className="text-[var(--ink)]">
-          Para ir directo a lo que te importa, filtra por experiencia (Producto,
-          Diseño, Código, Video, Social Media, Marketing, AI).
+          Filter by expertise to jump straight to what matters: Product,
+          Design, Code, Video, Social Media, Marketing, AI.
         </p>
       </div>
 
       {/* Filters */}
       <div className="flex flex-col gap-2 lg:gap-3">
-        <p className="text-sm font-medium text-[var(--ink)] lg:text-base">Filtrar por experiencia:</p>
+        <p className="text-sm font-medium text-[var(--ink)] lg:text-base">Filter by expertise:</p>
         <div className="flex flex-wrap gap-2 lg:gap-3">
           {/* All filter */}
           <button
@@ -74,7 +73,7 @@ export function PortfolioSection() {
                 : 'bg-[var(--n-50)] text-[var(--v-800)] hover:bg-[var(--v-100)]'
             }`}
           >
-            Todos
+            All
           </button>
           {filterOptions.map((filter) => (
             <button
@@ -111,21 +110,21 @@ export function PortfolioSection() {
       {/* Message when no filter selected */}
       {activeFilter === null && (
         <p className="py-6 text-center text-base text-gray-500 lg:py-8 lg:text-lg">
-          Selecciona un filtro para ver los proyectos
+          Select a filter to view projects
         </p>
       )}
 
       {/* Message when filter has no results */}
       {activeFilter !== null && filteredProjects.length === 0 && (
         <p className="py-6 text-center text-base text-gray-500 lg:py-8 lg:text-lg">
-          No hay proyectos con este filtro.
+          No projects match this filter.
         </p>
       )}
       
       {/* Project count - only show when projects are visible */}
       {filteredProjects.length > 0 && (
         <p className="text-center text-sm text-gray-400 lg:text-base">
-          Mostrando {filteredProjects.length} de {portfolioProjects.length} proyectos
+          Showing {filteredProjects.length} of {portfolioProjects.length} projects
         </p>
       )}
     </section>

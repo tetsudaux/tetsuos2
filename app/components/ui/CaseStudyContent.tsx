@@ -193,7 +193,7 @@ function ImageBlock({ block, index }: { block: Extract<CaseStudyBlock, { type: '
       <div className="aspect-square w-full overflow-hidden rounded-[12px]">
         <img
           src={block.src}
-          alt={block.alt || 'Imagen del proyecto'}
+          alt={block.alt || 'Project image'}
           className="h-full w-full object-cover"
         />
       </div>
@@ -210,7 +210,7 @@ function GalleryBlock({ block, index }: { block: Extract<CaseStudyBlock, { type:
           <div key={i} className="aspect-square overflow-hidden rounded-[12px]">
             <img
               src={image.src}
-              alt={image.alt || `Imagen ${i + 1}`}
+              alt={image.alt || `Image ${i + 1}`}
               className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>
@@ -233,7 +233,7 @@ function VideoBlock({ block, index }: { block: Extract<CaseStudyBlock, { type: '
       <div className="aspect-video w-full overflow-hidden rounded-[12px]">
         <iframe
           src={`https://www.youtube.com/embed/${block.youtubeId}`}
-          title={block.title || 'Video del proyecto'}
+          title={block.title || 'Project video'}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           className="h-full w-full"
@@ -367,7 +367,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
 
   // Default content if no caseStudy
   const defaultContent: CaseStudyBlock[] = [
-    { type: 'text', title: 'Descripción', value: 'Este proyecto aún no tiene descripción detallada.' },
+    { type: 'text', title: 'Description', value: 'This project doesn\u2019t have a detailed description yet.' },
   ];
 
   const content = project.caseStudy?.content || defaultContent;

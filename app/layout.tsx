@@ -6,8 +6,8 @@ import { SharedElementModal } from "./components/ui/SharedElementModal";
 import { BuildInfo } from "./components/ui/BuildInfo";
 
 export const metadata: Metadata = {
-  title: "Tetsu Osnaya | UX/UI Designer",
-  description: "Portfolio de Tetsu Osnaya - Diseñador UX/UI. Diseño soluciones para aumentar conversión y reducir fricción.",
+  title: "Tetsu Osnaya | Product Designer",
+  description: "Tetsu Osnaya's portfolio — Product Designer. I design solutions to increase conversion and reduce friction.",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{

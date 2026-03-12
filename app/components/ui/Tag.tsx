@@ -11,12 +11,12 @@ interface TagProps {
 
 const tagConfig: Record<TagType, { icon: IconName; colorClass: string }> = {
   video: { icon: 'video', colorClass: 'text-[var(--mg-700)]' },
-  diseño: { icon: 'diseño', colorClass: 'text-[var(--mg-700)]' },
+  design: { icon: 'design', colorClass: 'text-[var(--mg-700)]' },
   'social-media': { icon: 'social-media', colorClass: 'text-[var(--mg-700)]' },
-  código: { icon: 'código', colorClass: 'text-[var(--mg-700)]' },
+  code: { icon: 'code', colorClass: 'text-[var(--mg-700)]' },
   marketing: { icon: 'marketing', colorClass: 'text-[var(--mg-700)]' },
   ai: { icon: 'ai', colorClass: 'text-[var(--v-800)]' },
-  producto: { icon: 'producto', colorClass: 'text-[var(--v-800)]' },
+  product: { icon: 'product', colorClass: 'text-[var(--v-800)]' },
 };
 
 export function Tag({ type, label, size = 'md' }: TagProps) {

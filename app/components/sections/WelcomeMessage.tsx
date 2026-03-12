@@ -5,11 +5,11 @@ export function WelcomeMessage() {
     <div className="animate-slide-in-left flex w-full justify-start">
       <div className="message-bubble rounded-bl-xl rounded-br-xl rounded-tl-sm rounded-tr-xl border-2 border-[var(--v-500)] bg-[var(--background-subtle)] p-4 lg:p-6">
         <p className="text-base leading-relaxed text-[var(--ink)] lg:text-lg lg:leading-relaxed">
-          ¡Hola! Soy Tetsu Osnaya, Diseñador UX/UI.{' '}
+          Hi! I&apos;m Tetsu Osnaya, Product Designer.{' '}
           <span className="font-semibold text-[var(--v-500)]">
-            ¿Qué quieres lograr con tu producto?
+            What do you want to achieve with your product?
           </span>{' '}
-          Yo diseño la solución para aumentar conversión y reducir fricción.
+          I design solutions to increase conversion and reduce friction.
         </p>
       </div>
     </div>

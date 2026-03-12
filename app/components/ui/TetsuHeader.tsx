@@ -21,7 +21,7 @@ export function TetsuHeader() {
             Tetsu Osnaya
           </h1>
           <p className="text-lg text-[var(--ink)] opacity-80 sm:text-xl lg:text-2xl">
-            UX/UI Designer
+            Product Designer
           </p>
         </div>
       </div>
@@ -31,7 +31,7 @@ export function TetsuHeader() {
         onClick={toggleTheme}
         role="switch"
         aria-checked={theme === 'dark'}
-        aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+        aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
         className="theme-toggle-track relative flex h-8 w-16 shrink-0 cursor-pointer items-center rounded-full border border-[var(--n-100)] transition-colors duration-300"
       >
         {/* Sun icon - left */}

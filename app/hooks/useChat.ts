@@ -72,15 +72,15 @@ const sectionMessages: Record<Section, { user: string; tetsu: string }> = {
     tetsu: '',
   },
   cv: {
-    user: 'Ver tu CV',
+    user: 'View CV',
     tetsu: 'cv-section',
   },
   portfolio: {
-    user: 'Ver tu trabajo',
+    user: 'View work',
     tetsu: 'portfolio-section',
   },
   contact: {
-    user: 'Hablemos',
+    user: 'Let\u2019s talk',
     tetsu: 'contact-section',
   },
 };
