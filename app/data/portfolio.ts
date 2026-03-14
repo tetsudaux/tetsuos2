@@ -10,7 +10,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { type: 'design', label: 'Design' },
     ],
     category: 'product',
-    image: 'https://images.unsplash.com/photo-1555421689-d68471e189f2?w=600&h=400&fit=crop',
+    image: '/assets/deurope_00.webp',
     caseStudy: {
       content: [
         { type: 'text', title: 'Role', value: 'UX Designer — Oct 2025 to Present · On-site' },
@@ -35,7 +35,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { type: 'product', label: 'Product' },
     ],
     category: 'product',
-    image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=600&h=400&fit=crop',
+    image: '/assets/consubanco_00.webp',
     caseStudy: {
       content: [
         { type: 'text', title: 'Role', value: 'Instructional Design & Programming · Feb–Oct 2025 · Hybrid' },
@@ -61,7 +61,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { type: 'design', label: 'Design' },
     ],
     category: 'product',
-    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop',
+    image: '/assets/emprendeia_00.webp',
     caseStudy: {
       content: [
         { type: 'text-featured', value: 'AI-powered modular platform for Mexican micro-entrepreneurs. Won 1st place at the UTEL x Google Hackathon.' },
@@ -91,7 +91,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { type: 'ai', label: 'AI' },
     ],
     category: 'product',
-    image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&h=400&fit=crop',
+    image: '/assets/herbolaria_00.webp',
     caseStudy: {
       content: [
         { type: 'text-featured', value: 'Headless ecommerce built on Medusa.js with a self-managed VPS. Integrated Envia.com shipping APIs and implemented technical SEO.' },
@@ -117,7 +117,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { type: 'design', label: 'Design' },
     ],
     category: 'product',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+    image: '/assets/toss_00.webp',
     caseStudy: {
       content: [
         { type: 'text-featured', value: 'End-to-end UX design and API integrations for an AI-driven lead generation tool. Full product delivery — from user experience design to a functional, deployed product.' },
@@ -145,7 +145,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { type: 'marketing', label: 'Marketing' },
     ],
     category: 'product',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
+    image: '/assets/puerta_00.webp',
     caseStudy: {
       content: [
         { type: 'text-featured', value: 'Monetized YouTube channel built from scratch as solo creator. Full ownership of the entire content pipeline — from strategy and scripting to SEO, editing, and algorithm-driven content curation.' },
@@ -179,7 +179,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { type: 'marketing', label: 'Marketing' },
     ],
     category: 'design',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
+    image: '/assets/verseth_00.webp',
     caseStudy: {
       content: [
         { type: 'text', title: 'Role', value: 'Design & Marketing Jr. · 2023–2024 · Hybrid' },
@@ -208,7 +208,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { type: 'code', label: 'Code' },
     ],
     category: 'design',
-    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop',
+    image: '/assets/aprende_00.webp',
     caseStudy: {
       content: [
         { type: 'text', title: 'Role', value: 'Web Designer · 2021–2023 · Remote/Hybrid' },
@@ -230,7 +230,7 @@ export const portfolioProjects: PortfolioProject[] = [
     company: 'UCamp',
     tags: [{ type: 'design', label: 'Design' }],
     category: 'design',
-    image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=400&fit=crop',
+    image: '/assets/ucamp_00.webp',
     caseStudy: {
       content: [
         { type: 'text', title: 'Role', value: 'Graphic Designer · 2022–2023 · Remote' },
@@ -255,7 +255,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { type: 'ai', label: 'AI' },
     ],
     category: 'product',
-    image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&h=400&fit=crop',
+    image: '/assets/pensaday_00.webp',
     caseStudy: {
       content: [
         { type: 'text-featured', value: 'PensaDay — a reflective journaling mobile app with guided questions and AI-powered behavior pattern detection. Designed end-to-end as the capstone project for the Coderhouse Product Management certificate.' },
@@ -295,7 +295,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { type: 'design', label: 'Design' },
     ],
     category: 'product',
-    image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&h=400&fit=crop',
+    image: '/assets/Nuhead_00.webp',
     caseStudy: {
       content: [
         { type: 'text', title: 'Context', value: 'Final project for the Crehana MicroDegree in UX/UI Design (Sep–Dec 2022). End-to-end product design — from research to high-fidelity prototype.' },
@@ -324,7 +324,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { type: 'social-media', label: 'Social Media' },
     ],
     category: 'design',
-    image: 'https://tetsuos.com/wp-content/uploads/2024/05/youtube-channel-thumbnail.png',
+    image: '/assets/nicoliense_00.webp',
     caseStudy: {
       content: [
         { type: 'link', href: 'https://www.youtube.com/@nicoliense', label: 'View YouTube channel' },
@@ -348,7 +348,7 @@ export const portfolioProjects: PortfolioProject[] = [
 
     ],
     category: 'design',
-    image: 'https://tetsuos.com/wp-content/uploads/2024/05/iqc-thumbnail.png',
+    image: '/assets/iqc_00.webp',
     caseStudy: {
       content: [
         { type: 'text', title: 'Activities', value: 'Translating the ideas of the clients in graphics according to their needs. Designing business cards, catalogs, flyers, banners, mockups and videos for social media. ' },
@@ -374,7 +374,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { type: 'design', label: 'Design' },
     ],
     category: 'design',
-    image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&h=400&fit=crop',
+    image: '/assets/elementia_00.webp',
   },
 ];
 

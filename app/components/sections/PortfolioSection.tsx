@@ -18,8 +18,11 @@ const filterOptions: { type: TagType; label: string }[] = [
   { type: 'product', label: 'Product' },
 ];
 
+type SortOrder = 'newest' | 'oldest';
+
 export function PortfolioSection() {
   const [activeFilter, setActiveFilter] = useState<TagType | 'all' | null>(null);
+  const [sortOrder, setSortOrder] = useState<SortOrder>('newest');
   const projectsGridRef = useRef<HTMLDivElement>(null);
 
   const handleFilterClick = (filter: TagType | 'all') => {
@@ -35,13 +38,15 @@ export function PortfolioSection() {
   };
 
   // No projects shown when no filter is selected
-  const filteredProjects = activeFilter === null
+  const filtered = activeFilter === null
     ? []
     : activeFilter === 'all'
       ? portfolioProjects
       : portfolioProjects.filter((project) =>
           project.tags.some((tag) => tag.type === activeFilter)
         );
+
+  const filteredProjects = sortOrder === 'oldest' ? [...filtered].reverse() : filtered;
 
   return (
     <section className="flex flex-col gap-4 lg:gap-6">
@@ -91,6 +96,28 @@ export function PortfolioSection() {
           ))}
         </div>
       </div>
+
+      {/* Sort - Only shown when projects are visible */}
+      {filteredProjects.length > 0 && (
+        <div className="flex items-center gap-2">
+          <p className="text-sm font-medium text-[var(--ink)] lg:text-base">Sort:</p>
+          <div className="flex gap-1.5">
+            {(['newest', 'oldest'] as SortOrder[]).map((order) => (
+              <button
+                key={order}
+                onClick={() => setSortOrder(order)}
+                className={`rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all lg:px-3 lg:py-2 lg:text-sm ${
+                  sortOrder === order
+                    ? 'bg-[var(--v-500)] text-white'
+                    : 'bg-[var(--n-50)] text-[var(--v-800)] hover:bg-[var(--v-100)]'
+                }`}
+              >
+                {order === 'newest' ? 'Newest' : 'Oldest'}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Projects - Only shown when a filter is selected */}
       {filteredProjects.length > 0 && (
